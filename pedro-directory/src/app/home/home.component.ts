@@ -12,6 +12,9 @@ export class HomeComponent implements OnInit {
   placeholder = "Learning Angular";
   myBoolean = true;
   constructor() { }
+  alertMe(a:String){
+   alert(a);
+  }
 
   ngOnInit() {
   }
