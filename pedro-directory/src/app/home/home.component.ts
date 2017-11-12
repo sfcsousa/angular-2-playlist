@@ -7,7 +7,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class HomeComponent implements OnInit {
-  home_text = "meu Deus do ceu me ajuda";
+  home_text = "Welcome to the home page ladies and gents...";
   constructor() { }
 
   ngOnInit() {
