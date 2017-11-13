@@ -12,4 +12,8 @@ export class AppComponent {
     name: 'Castan',
     belt: 'Gold'
   };
+    yell = (e:any) => {
+      alert("I'm yelling");
+      console.log(e);
+    }
 }

@@ -8,10 +8,9 @@
   </nav>
 </header>
 <section id='main'>
-  <!-- binding property passing that to the home
-  component through ninja property
-  [ninja]='ninja'
-    [property name] = 'variable'-->
-  <app-home [ninja]="ninja">Learning the ropes w/ angular 2 to 5</app-home>
+  <!-- Custom event binding gettin data from the child component to its parent.
+  (onYell)="yell($event)"
+   (Custom binding) = 'customFn(var)'-->
+  <app-home [ninja]="ninja" (onYell)="yell($event)">Learning the ropes w/ angular 2 to 5</app-home>
 
 </section>

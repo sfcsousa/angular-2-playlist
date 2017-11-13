@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -12,11 +12,14 @@ export class HomeComponent implements OnInit {
   placeholder = "Learning Angular";
   myBoolean = true;
   @Input() ninja;
+  @Output() onYell = new EventEmitter();
   constructor() { }
   alertMe(a:String){
    alert(a);
   }
-
+  fireYellEvent(e){
+    this.onYell.emit(e);
+  }
   ngOnInit() {
   }
 
