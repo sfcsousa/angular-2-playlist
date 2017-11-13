@@ -11,6 +11,10 @@ export class HomeComponent implements OnInit {
   myString  = "Angular? Learning the ropes but it is as easy as...";
   placeholder = "Learning Angular";
   myBoolean = true;
+  ninja = {
+    name: 'Ryu',
+    belt: 'Blue'
+  };
   constructor() { }
   alertMe(a:String){
    alert(a);
