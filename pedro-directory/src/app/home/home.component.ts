@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -11,10 +11,7 @@ export class HomeComponent implements OnInit {
   myString  = "Angular? Learning the ropes but it is as easy as...";
   placeholder = "Learning Angular";
   myBoolean = true;
-  ninja = {
-    name: 'Ryu',
-    belt: 'Blue'
-  };
+  @Input() ninja;
   constructor() { }
   alertMe(a:String){
    alert(a);

@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app, mas que carvalho, works';
   name = 'Meu nome vai aqui pai';
+  ninja = {
+    name: 'Castan',
+    belt: 'Gold'
+  };
 }
