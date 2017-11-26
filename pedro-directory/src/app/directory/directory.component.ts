@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-
+import { ActivatedRoute } from '@angular/router'
 @Component({
   selector: 'app-directory',
   templateUrl: './directory.component.html',
@@ -7,8 +7,10 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class DirectoryComponent implements OnInit {
-
-  constructor() { }
+  ninja: string;
+  constructor(private route: ActivatedRoute) {
+      this.ninja = route.snapshot.params['ninja'];
+   }
 
   ngOnInit() {
   }
