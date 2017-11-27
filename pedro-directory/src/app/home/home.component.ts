@@ -8,18 +8,9 @@ import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter } fro
 })
 export class HomeComponent implements OnInit {
   home_text = "Welcome to the home page ladies and gents...";
-  myString  = "Angular? Learning the ropes but it is as easy as...";
-  placeholder = "Learning Angular";
-  myBoolean = true;
-  @Input() ninja;
-  @Output() onYell = new EventEmitter();
+  
   constructor() { }
-  alertMe(a:String){
-   alert(a);
-  }
-  fireYellEvent(e){
-    this.onYell.emit(e);
-  }
+
   ngOnInit() {
   }
 

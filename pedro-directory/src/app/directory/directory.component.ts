@@ -8,21 +8,12 @@ import 'rxjs/add/operator/switchMap'
   encapsulation: ViewEncapsulation.None
 })
 export class DirectoryComponent implements OnInit {
-  ninja: string;
-  constructor(private route: ActivatedRoute,
-              private router: Router) {
+  classes = {'blue':false,'red':true,'underline':true};
+  test =  true; 
+  constructor() {
     }
 
   ngOnInit() {
-    //this.ninja = route.paramMap.get('ninja');
-    let Jeez = (a:any) =>{
-      return a.toString();
-    }
-    let teste = this.route.paramMap
-                .switchMap((params: ParamMap) => Jeez(params.get('ninja'))) 
-
-    console.log(teste);
-    this.ninja =  this.route.snapshot.paramMap.get('ninja');
   }
 
 }
