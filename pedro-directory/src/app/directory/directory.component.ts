@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { ActivatedRoute } from '@angular/router'
+import {  Router, ActivatedRoute, ParamMap } from '@angular/router'
+import 'rxjs/add/operator/switchMap'
 @Component({
   selector: 'app-directory',
   templateUrl: './directory.component.html',
@@ -8,11 +9,20 @@ import { ActivatedRoute } from '@angular/router'
 })
 export class DirectoryComponent implements OnInit {
   ninja: string;
-  constructor(private route: ActivatedRoute) {
-      this.ninja = route.snapshot.params['ninja'];
-   }
+  constructor(private route: ActivatedRoute,
+              private router: Router) {
+    }
 
   ngOnInit() {
+    //this.ninja = route.paramMap.get('ninja');
+    let Jeez = (a:any) =>{
+      return a.toString();
+    }
+    let teste = this.route.paramMap
+                .switchMap((params: ParamMap) => Jeez(params.get('ninja'))) 
+
+    console.log(teste);
+    this.ninja =  this.route.snapshot.paramMap.get('ninja');
   }
 
 }
