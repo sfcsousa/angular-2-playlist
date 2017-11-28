@@ -8,8 +8,11 @@ import 'rxjs/add/operator/switchMap'
   encapsulation: ViewEncapsulation.None
 })
 export class DirectoryComponent implements OnInit {
-  classes = {'blue':false,'red':true,'underline':true};
-  test =  true; 
+  ninjas = [
+    {name:"Goku", belt: "green"},
+    {name:"Yoshi", belt: "black"},
+    {name:"Jonny", belt: "purple"},
+  ]
   constructor() {
     }
 
