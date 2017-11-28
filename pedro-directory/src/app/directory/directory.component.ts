@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import {  Router, ActivatedRoute, ParamMap } from '@angular/router'
 import 'rxjs/add/operator/switchMap'
+import { FilterPipe } from '../filter.pipe'
 @Component({
   selector: 'app-directory',
   templateUrl: './directory.component.html',
