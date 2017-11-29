@@ -13,7 +13,6 @@ export class FilterPipe implements PipeTransform {
    //check if search term is undefined
    if(term ===  undefined) return ninjas;
    //return updated ninjas array
-   console.log(ninjas)
    return ninjas.filter(function(ninja){
     return ninja.name.toLowerCase().includes(term.toLowerCase());
    });

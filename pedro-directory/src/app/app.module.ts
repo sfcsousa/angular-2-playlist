@@ -7,7 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { DirectoryComponent } from './directory/directory.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { FilterPipe } from './filter.pipe';
-
+import { LoggingService } from './logging.service'
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import { FilterPipe } from './filter.pipe';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ LoggingService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
